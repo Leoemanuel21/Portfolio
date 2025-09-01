@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-:{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,4 +24,32 @@ body{
     line-height: 1.5em;
     background-color: var(--fundo-principal);
     color: var(--texto);
+}
+
+header{
+    background-color: var(--destaque);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+#menu > ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#menu > a{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: 600;
+    padding: 1.2rem 1.5rem;
+    border-radius: .5rem;
+    transition: background-color .5s, color .5s;
+}
+
+#menu > a:hover{
+    background-color: var(--destaque-inverso);
+    color: var(--destaque);
 }
