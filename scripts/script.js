@@ -1,6 +1,27 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
+// Função para mostrar e ocultar os projetos
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('article');
+      const container = article.querySelector('.projeto-container');
+
+      // alterna a classe 'hidden'
+      container.classList.toggle('hidden');
+
+      // verifica se está oculto
+      const hidden = container.classList.contains('hidden');
+
+      // muda o texto do botão
+      btn.textContent = hidden ? 'Mostrar projetos ▼' : 'Ocultar projetos ▲';
+    });
+  });
+});
+
+
+
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
 temaEscuro(temasalvo === 'escuro');

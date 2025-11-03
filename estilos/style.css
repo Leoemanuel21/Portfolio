@@ -123,10 +123,6 @@ article h2{
     line-height: 2rem;
 }
 
-#skills{
-
-}
-
 #skill-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -193,19 +189,39 @@ article h2{
     font-size: 1.1rem;
 }
 
-#projeto-container{
+.toggle-btn{
+    background-color: var(--destaque-inverso);
+    color: white;
+    border: none;
+    padding: .8rem 1.6rem;
+    margin: 1rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: var(--destaque);
+}
+
+.projeto-container.hidden {
+  display: none;
+}
+
+.projeto-container{
     display: flex;
     flex-flow: column-reverse nowrap;
     gap: 2rem;
 }
 
-#projeto-container a{
-    color: var(--texto);
-    text-decoration: none;
+.projeto-container a{
+    color: var(--destaque);
     width: 100%;
+    cursor: pointer;
 }
 
-#projeto-container .projeto{
+.projeto-container .projeto{
     display: flex;
     flex-flow: column nowrap;
     /*gap: 1.5rem;*/
@@ -216,18 +232,21 @@ article h2{
     transition: border-color 0.5s, border-width 0.5s;
 }
 
-#projeto-container .projeto:hover{
+.projeto-container .projeto:hover{
     border-color: var(--destaque);
     border-left-width: 1.5rem;
-    cursor: pointer;
 }
 
-#projeto-container .foto{
+.projeto-container .foto{
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
     overflow: hidden;
     border-radius: .8rem;
+}
+
+.projeto-container summary{
+    cursor: pointer;
 }
 
 footer{
@@ -252,21 +271,21 @@ footer a:hover{
         grid-template-columns: 1fr 1fr;
     }
 
-    #projeto-container a{
+    .projeto-container a{
         width: 30%;
     }
 
-    #projeto-container .projeto{
+    .projeto-container .projeto{
         display: flex;
         flex-flow: row-reverse nowrap;
         justify-content: space-between;
     }
 
-    #projeto-container .projeto-info{
+    .projeto-container .projeto-info{
         max-width: 80%;
     }
 
-    #projeto-container .foto{
+    .projeto-container .foto{
         aspect-ratio: 1/1;
         max-width: 70%;
         max-height: 20rem;
