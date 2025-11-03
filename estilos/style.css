@@ -28,19 +28,23 @@ body{
 
 header{
     background-color: var(--destaque);
+    color: var(--texto);
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: flex-end;
     align-content: center;
 }
 
-#menu > ul{
+#menu ul{
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 
-#menu > a{
+#menu a{
     text-decoration: none;
     color: var(--texto-inverso);
     font-weight: 600;
@@ -49,7 +53,7 @@ header{
     transition: background-color .5s, color .5s;
 }
 
-#menu > a:hover{
+#menu a:hover{
     background-color: var(--destaque-inverso);
     color: var(--destaque);
 }
@@ -267,6 +271,21 @@ footer a:hover{
 }
 
 @media screen and (min-width: 768px){
+    main{
+        grid-template-columns: auto 30rem 1fr auto;
+    }
+
+    #ficha{
+        grid-column: 2/3;
+        height: fit-content;
+        position: sticky;
+        top: 6.5rem;
+    }
+
+    #detalhes{
+        grid-column: 3/4;
+    }
+
     #skill-container{
         grid-template-columns: 1fr 1fr;
     }

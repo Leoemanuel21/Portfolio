@@ -1,6 +1,3 @@
-const botao = document.getElementById('botao-tema');
-const body = document.body;
-
 // Função para mostrar e ocultar os projetos
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.toggle-btn').forEach(btn => {
@@ -20,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
+const botao = document.getElementById('botao-tema');
+const body = document.body;
 
 // Persistência do tema
 const temasalvo = localStorage.getItem('tema');
